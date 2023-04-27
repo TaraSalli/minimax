@@ -1,0 +1,22 @@
+1. Limitations:
+    Time-wise this algorith can significantly slow down as the number of pieces/ piles increases 
+    because the algorithm has to check each possible combination, therefore the combinations increase 
+    exponentially, which therefore slows down the program, which would lessen the user-experience
+    because the "bot" they are playing against is taking a long time to respond to their move
+
+2. Does the bot always win?
+    Simply put, no. There are instances when there simply is no "dominant" method for the bot. For example, 
+    if there are 2 pieces on the board to begin with, and the user takes 1, the bot has no other choice but to
+    take the last one. In the end, the bot can only work with the "state" that is given; it cannot alter a 
+    beginning state of a game that may already by chance be unfavorable for it.
+
+3. Nim inverse
+    To derive the inverse of the nim game, I would first change the minimax function. Specifically, the base case 
+    on line 71 to check that the number of pieces is NOT equal to 0. This simple change would direct the algorithm
+    to want to take the last piece, rather than avoid is as before.
+
+4. non-Nim games
+    This algorithm would likely not work well on more complex games with larger "trees" (aka number of possibel moves and outcomes).
+    A good example of this is chess. Given the number of pieces, as well as the fact that each piece is accompanied by
+    its own distinct limitations (how it can move on the board), the algorithm to run this game would become too complex
+    and likely take up significant time to run.
