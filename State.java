@@ -4,8 +4,8 @@ public class State {
             State state = new State(7, true);
         }
 
-        private int numPieces;
-        private boolean player;
+        public int numPieces;
+        public boolean player;
 
         public State (int numPieces, boolean player) {
             this.numPieces = numPieces;
@@ -13,7 +13,7 @@ public class State {
         }
     
     
-         
+        
         public int getNumPieces() {
             return numPieces;
         }
